@@ -1,56 +1,88 @@
-# HOME
+# Home
 
-[中文](REAMDE_ZH.md) | English
+[中文](./README_ZH.md) | English
 
-🚧 Project Introduction
+🚧 Project Overview
 • Responsive design, mobile-friendly.
-• Main feature 1
-• Main feature 2
+• Smooth scrolling experience
+• Clean and attractive UI
+• Blog functionality
+• SEO optimization
 
 ## Technologies Used
-- Tech 1
-- Tech 2
-- Tech 3
-- Tech 4
+- Next.js
+- React
+- TailwindCSS
+- TypeScript
 
-🚀 Usage
-1. Clone this repository or download it [here](https://github.com/your-username/your-repo-name/archive/refs/heads/master.zip), then deploy it.
+🚀 Usage Instructions
+1. Clone this repository or download it from [here](https://github.com/mynxg/home-template/archive/refs/heads/main.zip), then deploy it.
+or
+```bash
+git clone https://github.com/mynxg/home-template.git
+```
 
-2. Setting
-   Replace the relevant configuration information in the `config.js` file.
+1.2 Install dependencies
+```bash
+pnpm install
+```
+1.3 Run the project
+```bash
+npm run dev
+```
+1.4 Build the project
+```bash
+npm run build
+```
 
-   ```javascript:config.js
-   const config = {
-     apiUrl: "https://your-api-url.com",
-     // ... other configurations
-   };
+2. Modify data
+   Edit your personal information in the `src\data\resume.tsx` file.
+
+   ```javascript:resume.tsx
+   export const NAV_ITEMS = [
+   { href: "/", icon: HomeIcon, label: "Home" },
+   { href: "/blog", icon: BookOpenIcon, label: "Blog" },
+   { href: "https://github.com/mynxg", icon: GithubIcon, label: "GitHub" },
+   { href: "https://gitee.com/mynxg", icon: Icons.gitee, label: "Gitee" },
+   { href: "https://dub.sh/keney-x", icon: Icons.x, label: "X" },
+   { href: "mailto:nxg@nnxx.me", icon: MailIcon, label: "Email" },
+   ];
+   ...
    ```
 
-3. Website icon & loading animation (optional)
-   In the `public` directory, replace with your own icon or loading animation.
-   - `favicon.ico` is the website icon that appears on the browser tab.
-   - `loading.gif` is the loading animation.
+Add your blog posts in the `content` directory.
 
-4. Upload
-   Upload the `index.html` file in the `public` directory and all files in the directory to the root directory of the website. Enjoy!
+```markdown:content\first.mdx
+   ---
+   title: "My First Blog Post"
+   publishedAt: "2023-06-18"
+   summary: "This is my first blog post using MDX."
+   ---
+
+   # My First Blog Post
+
+   This is my first blog post using MDX.
+
+```
+
+
+3. Website Icon & Loading Animation (Optional)
+   Replace with your own icons or loading animations in the `public` directory.
+   - `favicon.ico` is the website icon displayed on the browser tab.
+   - `avatar.jpg` is the avatar.
+
 
 ⚡ Deploy to GitHub Pages
 1. Fork this repository.
-2. Follow the instructions in #Usage.2 to configure your API.
-3. Go to the settings of your own repository - Setting - Pages - Deploy from a branch - Branch(main/root)
+2. Go to your repository's Settings - Pages - Deploy from a branch - Branch(main/root)
 
 ⚡ Deploy to Vercel
 1. Fork this repository.
-2. Follow the instructions in #Usage.2 to configure your API.
-3. Access your own Vercel dashboard.
-4. Create a new project and import the repository from GitHub.
-5. No need to make any changes to the default settings, just click Deploy.
-6. China mainland may need to bind a custom domain to access Vercel.
+2. Visit your own Vercel dashboard.
+3. Create a new project and import the repository from GitHub.
+4. No need to change any default settings, just click Deploy.
+5. Users in mainland China may need to bind a custom domain to access Vercel.
 
-✨ Tips
-- Tip 1
-- Tip 2
-- Tip 3
 
 ## License
 [GLWT]
