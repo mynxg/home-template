@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter, Poppins } from 'next/font/google'
 import { Navbar } from '../components/Navbar'
-import { ThemeProvider } from '@/components/theme-provider'
+import { CustomThemeProvider } from '@/components/theme-provider'
 import { SEO } from '@/config/seo'
 import Script from 'next/script'
 
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <CustomThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="min-h-screen">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <main className="prose dark:prose-invert max-w-none">
@@ -35,7 +35,7 @@ export default function RootLayout({
             </div>
             <Navbar />
           </div>
-        </ThemeProvider>
+        </CustomThemeProvider>
         <Script id="console-message" strategy="afterInteractive">
           {`
             fetch('/api/joke')

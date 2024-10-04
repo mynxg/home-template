@@ -18,6 +18,6 @@ module.exports = {
     },
   },
   plugins: [],
-  darkMode: 'class', // 确保这行存在
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
+  // Remove the purge option as it's replaced by content
 }
